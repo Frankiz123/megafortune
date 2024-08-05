@@ -1,0 +1,23 @@
+List<List<String>> imagePathGroups = [
+  [
+    "./assets/images/platform1.png",
+    "./assets/images/platform2.png",
+    "./assets/images/platform3.png"
+  ],
+  [
+    "./assets/images/platform4.png",
+    "./assets/images/platform5.png",
+    "./assets/images/platform6.png"
+  ],
+  [
+    "./assets/images/platform7.png",
+    "./assets/images/platform8.png",
+    "./assets/images/platform9.png"
+  ],
+  [
+    "./assets/images/platform10.png",
+    "./assets/images/platform11.png",
+    "./assets/images/platform12.png"
+  ],
+  ["./assets/images/platform13.png"]
+];

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:megafortune/Views/BuyCredit.dart';
+import 'package:megafortune/Views/Contact.dart';
+import 'package:megafortune/Views/Platform.dart';
 
 import '../components/_myNavbarIcon.dart';
 import '../consts/dimensions.dart';
@@ -13,7 +16,7 @@ class Index extends StatefulWidget {
 }
 
 class _IndexState extends State<Index> {
-  List<Widget> screens = [Home(),];
+  List<Widget> screens = [Home(), Platform(),BuyCredit(),Contact()];
 
   int currentIndex = 0;
 
@@ -46,36 +49,40 @@ class _IndexState extends State<Index> {
                   NavIcon(
                     iconPath: "./assets/images/homeIcon.svg",
                     label: "Home",
+                    isActive: currentIndex == 0,
                     onTap: () {
                       setState(() {
                         currentIndex = 0;
                       });
                     },
                   ),
-                  SizedBox(width: 15/baseWidth * Get.width),
+                  SizedBox(width: 15 / baseWidth * Get.width),
                   NavIcon(
                     iconPath: "./assets/images/PlatformIcon.svg",
                     label: "Platforms",
+                    isActive: currentIndex == 1,
                     onTap: () {
                       setState(() {
                         currentIndex = 1;
                       });
                     },
                   ),
-                  SizedBox(width: 15/baseWidth * Get.width),
+                  SizedBox(width: 15 / baseWidth * Get.width),
                   NavIcon(
                     iconPath: "./assets/images/cartIcon.svg",
                     label: "Buy Credit",
+                    isActive: currentIndex == 2,
                     onTap: () {
                       setState(() {
                         currentIndex = 2;
                       });
                     },
                   ),
-                  SizedBox(width: 15/baseWidth * Get.width),
+                  SizedBox(width: 15 / baseWidth * Get.width),
                   NavIcon(
                     iconPath: "./assets/images/contactIcon.svg",
                     label: "Contact Us",
+                    isActive: currentIndex == 3,
                     onTap: () {
                       setState(() {
                         currentIndex = 3;

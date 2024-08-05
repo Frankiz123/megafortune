@@ -11,14 +11,27 @@ import 'Views/Index.dart';
 void main() async{
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  await Future.delayed(const Duration(seconds: 2));
   runApp(const MyApp());
-  FlutterNativeSplash.remove();
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  void initialization() async{
+    await Future.delayed(const Duration(seconds: 2));
+    FlutterNativeSplash.remove();
+  }
+  @override
+  void initState() {
+    super.initState();
+    initialization();
+  }
   @override
   Widget build(BuildContext context) {
     FlutterStatusbarcolor.setStatusBarColor(primaryColor);
